@@ -4,12 +4,14 @@ import (
 	"fmt"
 	log "github.com/Sirupsen/logrus"
 	"github.com/gorilla/mux"
+	"html/template"
 	"net/http"
 	"strings"
 )
 
 func hello(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello world!")
+    t, _ := template.ParseFiles("templates/index.html")
+    _ = t.ExecuteTemplate(w, "index.html", "")
 }
 
 func main() {
