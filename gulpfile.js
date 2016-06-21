@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglifyjs');
 
 var config = {
@@ -9,10 +10,12 @@ var config = {
 
 gulp.task('css', function() {
   return gulp.src('css/style.scss')
+  .pipe(sourcemaps.init())
   .pipe(sass({
     outputStyle: 'compressed',
     includePaths: [config.bowerDir + '/bootstrap-sass/assets/stylesheets']
   }))
+  .pipe(sourcemaps.write())
   .pipe(gulp.dest(config.publicDir + '/css'));
 });
 
