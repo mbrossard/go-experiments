@@ -17,6 +17,7 @@ func hello(w http.ResponseWriter, r *http.Request) {
 func main() {
 	r := mux.NewRouter()
 	r.HandleFunc("/", hello)
+	r.PathPrefix("/").Handler(http.StripPrefix("/", http.FileServer(http.Dir("assets/")))) 
 	err := http.ListenAndServe(":8080", r)
 	if err != nil {
 		log.Fatal("ListenAndServe: ", err)
