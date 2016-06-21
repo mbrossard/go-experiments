@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var uglify = require('gulp-uglifyjs');
 
 var config = {
   bowerDir: './bower_components',
@@ -15,4 +16,16 @@ gulp.task('css', function() {
   .pipe(gulp.dest(config.publicDir + '/css'));
 });
 
-gulp.task('default', ['css']);
+gulp.task('js', function() {
+  return gulp.src([
+    config.bowerDir + '/jquery/dist/jquery.min.js',
+    config.bowerDir + '/bootstrap-sass/assets/javascripts/bootstrap.js'
+  ])
+  .pipe(uglify('app.js', {
+    compress: false,
+    outSourceMap: true
+  }))
+  .pipe(gulp.dest(config.publicDir + '/js'));
+});
+
+gulp.task('default', ['css', 'js']);
