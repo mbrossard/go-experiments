@@ -1,6 +1,11 @@
 {
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-bower": "^0.0.13"
-  }
+    "name": "go-experiments",
+    "authors": [
+        "Mathias Brossard <mathias@brossard.org>"
+    ],
+    "private": true,
+    "devDependencies": {
+        "gulp": "^3.9.1",
+        "gulp-bower": "^0.0.13"
+    }
 }
