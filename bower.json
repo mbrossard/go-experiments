@@ -1,0 +1,16 @@
+{
+    "name": "go-exeperiments",
+    "authors": [
+        "Mathias Brossard <mathias@brossard.org>"
+    ],
+    "private": true,
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components"
+    ],
+    "dependencies": {
+        "bootstrap-sass": "^3.3.6",
+        "jquery": "1.11.x"
+    }
+}
