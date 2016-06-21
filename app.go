@@ -10,15 +10,7 @@ import (
 var templates = template.Must(template.ParseFiles("templates/index.html"))
 
 func hello(w http.ResponseWriter, r *http.Request) {
-	//	r.ParseForm()
-	//	fmt.Println(r.Form)
-	//	fmt.Println(r.URL)
-	//	for k, v := range r.Form {
-	//		fmt.Println("key:", k)
-	//		fmt.Println("val:", strings.Join(v, ","))
-	//	}
-	
-    err := templates.ExecuteTemplate(w, "index.html", "")
+	err := templates.ExecuteTemplate(w, "index.html", "")
 	if err != nil {
 		panic(err)
 	}
@@ -27,9 +19,7 @@ func hello(w http.ResponseWriter, r *http.Request) {
 func main() {
 	r := mux.NewRouter()
 	r.HandleFunc("/", hello)
-	r.PathPrefix("/").Handler(http.StripPrefix("/", http.FileServer(http.Dir("assets/")))) 
-
-	fmt.Println("Listening on port 8080")
+	r.PathPrefix("/").Handler(http.StripPrefix("/", http.FileServer(http.Dir("assets/"))))
 
 	err := http.ListenAndServe(":8080", r)
 	if err != nil {
