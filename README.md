@@ -26,4 +26,6 @@ $ npm install -g gulp bower
 $ npm install
 $ bower install
 $ gulp
+$ export GOPATH=$PWD
+$ go get
 ```
