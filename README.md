@@ -29,3 +29,9 @@ $ gulp
 $ export GOPATH=$PWD
 $ go get
 ```
+
+## Running the application
+
+```
+$ go runn app.go
+```
