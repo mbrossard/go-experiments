@@ -28,4 +28,11 @@ gulp.task('js', function() {
   .pipe(gulp.dest(config.publicDir + '/js'));
 });
 
-gulp.task('default', ['css', 'js']);
+gulp.task('fonts', function() {
+  return gulp.src([
+    config.bowerDir + '/bootstrap-sass/assets/fonts/**/*'
+  ])
+  .pipe(gulp.dest(config.publicDir + '/fonts'));
+});
+
+gulp.task('default', ['css', 'js', 'fonts']);
