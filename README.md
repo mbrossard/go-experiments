@@ -33,5 +33,5 @@ $ go get
 ## Running the application
 
 ```
-$ go runn app.go
+$ go run app.go
 ```
