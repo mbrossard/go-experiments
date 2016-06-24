@@ -9,7 +9,7 @@ import (
 
 var templates = template.Must(template.ParseFiles("templates/index.html"))
 
-func hello(w http.ResponseWriter, r *http.Request) {
+func index(w http.ResponseWriter, r *http.Request) {
 	err := templates.ExecuteTemplate(w, "index.html", "")
 	if err != nil {
 		panic(err)
@@ -18,7 +18,7 @@ func hello(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	r := mux.NewRouter()
-	r.HandleFunc("/", hello)
+	r.HandleFunc("/", index)
 	r.PathPrefix("/").Handler(http.StripPrefix("/", http.FileServer(http.Dir("assets/"))))
 
 	err := http.ListenAndServe(":8080", r)
