@@ -5,6 +5,7 @@ import (
 	"github.com/gorilla/mux"
 	"html/template"
 	"net/http"
+	"fmt"
 )
 
 var templates = template.Must(template.ParseFiles("templates/index.html"))
@@ -16,9 +17,17 @@ func index(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+var i = 0
+
+func counter(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "{\"counter\":%d}", i);
+	i += 1
+}
+
 func main() {
 	r := mux.NewRouter()
 	r.HandleFunc("/", index)
+	r.HandleFunc("/counter", counter)
 	r.PathPrefix("/").Handler(http.StripPrefix("/", http.FileServer(http.Dir("assets/"))))
 
 	err := http.ListenAndServe(":8080", r)
