@@ -12,7 +12,7 @@ const Routes = (
             <IndexRoute component={Home}/>
             <Route path="home" component={Home}/>
         </Route>
-        <Route path="login" component={Login}/>
+        <Route path="/login" component={Login}/>
     </Route>);
 
 export default Routes
