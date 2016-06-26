@@ -11,6 +11,8 @@
   ],
   "dependencies": {
     "bootstrap-sass": "^3.3.6",
-    "jquery": "1.11.x"
+    "font-awsome": "^4.x",
+    "jquery": "1.11.x",
+    "react": "^15.1.0"
   }
 }
