@@ -37,6 +37,7 @@ gulp.task('js', function() {
 
     return gulp.src([
         config.bowerDir + '/jquery/dist/jquery.js',
+        config.bowerDir + '/jquery-ui/jquery-ui.js',
         config.bowerDir + '/bootstrap-sass/assets/javascripts/bootstrap.js',
         config.bowerDir + '/react/react.js',
         config.bowerDir + '/react/react-dom.js'

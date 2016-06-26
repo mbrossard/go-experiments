@@ -13,6 +13,7 @@
     "bootstrap-sass": "^3.3.6",
     "font-awsome": "^4.x",
     "jquery": "1.11.x",
+    "jquery-ui": "jqueryui#~1.11.x",
     "react": "^15.1.0"
   }
 }
