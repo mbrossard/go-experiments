@@ -16,7 +16,10 @@ gulp.task('css', function() {
   .pipe(sourcemaps.init())
   .pipe(sass({
     outputStyle: 'compressed',
-    includePaths: [config.bowerDir + '/bootstrap-sass/assets/stylesheets']
+    includePaths: [
+      config.bowerDir + '/bootstrap-sass/assets/stylesheets',
+      config.bowerDir + '/font-awsome/scss'
+    ]
   }))
   .pipe(sourcemaps.write())
   .pipe(gulp.dest(config.publicDir + '/css'));
