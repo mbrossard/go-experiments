@@ -7,7 +7,9 @@ let Login = React.createClass({
                 <header id="header" className="animated fadeInDown">
 
                     <div id="logo-group">
-                        <span id="logo"> <img src="images/logo.png" alt="Go Experiments"/> </span>
+                        <span id="logo">
+                              <i className="fa fa-5x fa-rocket" aria-hidden="true"></i>
+                        </span>
                     </div>
 
                 </header>
