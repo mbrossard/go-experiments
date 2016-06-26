@@ -50,7 +50,8 @@ gulp.task('js', function() {
 
 gulp.task('fonts', function() {
   return gulp.src([
-    config.bowerDir + '/bootstrap-sass/assets/fonts/**/*'
+    config.bowerDir + '/bootstrap-sass/assets/fonts/**/*',
+    config.bowerDir + '/font-awsome/fonts/*'
   ])
   .pipe(gulp.dest(config.publicDir + '/fonts'));
 });
