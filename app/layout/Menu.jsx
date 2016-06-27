@@ -44,7 +44,7 @@ let Menu = React.createClass({
                     "id": "counter",
                     "link": "#/counter",
                     "name": "Counter",
-                    "icon": "fa-sign-out"
+                    "icon": "fa-clock-o"
                 },
                 {
                     "id": "signout",
