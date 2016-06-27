@@ -41,6 +41,12 @@ let Menu = React.createClass({
                     ]
                 },
                 {
+                    "id": "counter",
+                    "link": "#/counter",
+                    "name": "Counter",
+                    "icon": "fa-sign-out"
+                },
+                {
                     "id": "signout",
                     "link": "#/login",
                     "name": "Logout",
