@@ -5,11 +5,16 @@ var uglify = require('gulp-uglifyjs');
 var browserify = require('browserify');
 var babelify = require('babelify');
 var source = require('vinyl-source-stream');
+var rimraf = require('rimraf');
 
 var config = {
   bowerDir: './bower_components',
   publicDir: './assets'
 };
+
+gulp.task('clean', function(cb) {
+    rimraf('assets', cb);
+});
 
 gulp.task('css', function() {
   return gulp.src('css/style.scss')
