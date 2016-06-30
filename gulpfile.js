@@ -33,7 +33,7 @@ gulp.task('css', function() {
 });
 
 gulp.task('js', function() {
-    browserify({
+    return browserify({
         entries: './app/main.jsx',
         debug: true
   	})
