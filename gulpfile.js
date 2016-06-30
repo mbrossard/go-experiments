@@ -66,4 +66,9 @@ gulp.task('fonts', function() {
   .pipe(gulp.dest(config.publicDir + '/fonts'));
 });
 
+gulp.task('watch', function() {
+  gulp.watch('css/**/*.scss', ['css']);
+  gulp.watch('app/**/*.jsx', ['js']);
+});
+
 gulp.task('default', ['css', 'js', 'vendor', 'fonts']);
