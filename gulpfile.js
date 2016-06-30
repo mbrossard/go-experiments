@@ -41,7 +41,9 @@ gulp.task('js', function() {
 	.bundle()
 	.pipe(source('bundle.js'))
 	.pipe(gulp.dest(config.publicDir + '/js'));
+});
 
+gulp.task('vendor', function() {
     return gulp.src([
         config.bowerDir + '/jquery/dist/jquery.js',
         config.bowerDir + '/jquery-ui/jquery-ui.js',
