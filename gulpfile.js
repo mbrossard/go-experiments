@@ -17,17 +17,19 @@ gulp.task('clean', function(cb) {
 });
 
 gulp.task('css', function() {
-  return gulp.src('css/style.scss')
-  .pipe(sourcemaps.init())
-  .pipe(sass({
-    outputStyle: 'compressed',
-    includePaths: [
-      config.bowerDir + '/bootstrap-sass/assets/stylesheets',
-      config.bowerDir + '/font-awsome/scss'
-    ]
-  }))
-  .pipe(sourcemaps.write())
-  .pipe(gulp.dest(config.publicDir + '/css'));
+    return gulp.src('css/style.scss')
+    .pipe(sourcemaps.init())
+    .pipe(sass({
+        debug_info: true,
+        outputStyle: 'compressed',
+        includePaths: [
+            config.bowerDir + '/bootstrap-sass/assets/stylesheets',
+            config.bowerDir + '/font-awsome/scss',
+            './css/theme'
+        ]
+    }))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(config.publicDir + '/css'));
 });
 
 gulp.task('js', function() {
