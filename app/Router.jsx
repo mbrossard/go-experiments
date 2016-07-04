@@ -8,4 +8,4 @@ var rootInstance = render((
     <Router>
         {Routes}
     </Router>
-), document.getElementById('go-experiments'));
+), document.getElementById('wrapper'));
