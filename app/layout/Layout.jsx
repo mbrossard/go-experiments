@@ -8,9 +8,9 @@ let Layout = React.createClass({
         return (
             <div>
                 <Navbar />
-                <Menu />                
+                <Menu />
 
-                <div id="main" role="main">
+                <div id="main-content">
                     {this.props.children}
                 </div>
             </div>
