@@ -77,17 +77,13 @@ let Menu = React.createClass({
         }
     },
     render: function () {
-        return <div className="nav-side-menu">
-            <div className="brand">
-              <i className="fa fa-lg fa-rocket" aria-hidden="true"></i>           
-            </div>
-            <i className="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
-            <div className="menu-list">
-              <ul id="menu-content" className="menu-content collapse out">
-                {this.state.entries.map(this.renderMenuEntry)}
-              </ul>
-            </div>
+        return <div className="navbar-default sidebar" role="navigation">
+          <div className="sidebar-nav navbar-collapse">
+            <ul className="nav" id="side-menu">
+              {this.state.entries.map(this.renderMenuEntry)}
+            </ul>
           </div>
+        </div>
     }
 });
 
