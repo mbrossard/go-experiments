@@ -1,6 +1,10 @@
 import React from 'react'
 
 let Navbar = React.createClass({
+    renderNavEntry: function(entry, i) {
+        return <li className="dropdown">
+        </li>
+    },
     render: function () {
         return <nav className="navbar navbar-default navbar-static-top" role="navigation">
             <div className="navbar-header">
