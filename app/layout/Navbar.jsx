@@ -1,6 +1,23 @@
 import React from 'react'
 
 let Navbar = React.createClass({
+    getInitialState: function() {
+        return {
+            "entries": [
+                {
+                    "icon": "fa-user",
+                    "link": "#",
+                    "content": [
+                        {
+                            "icon": "fa-sign-out",
+                            "text": "Logout",
+                            "link": "#/login"
+                        }                        
+                    ]
+                }
+            ]
+        }
+    },
     renderNavEntry: function(entry, i) {
         return <li className="dropdown">
         </li>
