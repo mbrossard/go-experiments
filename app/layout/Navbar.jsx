@@ -20,6 +20,9 @@ let Navbar = React.createClass({
     },
     renderNavEntry: function(entry, i) {
         return <li className="dropdown">
+            <a className="dropdown-toggle" data-toggle="dropdown" href="{entry.link}">
+              <i className={"fa " + entry.icon + " fa-fw"}></i>  <i className="fa fa-caret-down"></i>
+            </a>
         </li>
     },
     render: function () {
