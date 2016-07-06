@@ -69,7 +69,7 @@ let Menu = React.createClass({
         } else {
             return <li>
                 <a href={entry.link}>
-                <i className={"fa " + entry.icon + " fa-lg"}></i> {entry.name}
+                  <i className={"fa " + entry.icon + " fa-fw"}></i> {entry.name}
                 </a>
               </li>
         }
