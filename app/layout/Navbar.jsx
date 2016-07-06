@@ -37,8 +37,9 @@ let Navbar = React.createClass({
             </div>
 
             <ul className="nav navbar-top-links navbar-right">
+              {this.state.entries.map(this.renderNavEntry)}
             </ul>
-            </nav>;
+          </nav>;
     }
 });
 
