@@ -25,6 +25,9 @@ let Navbar = React.createClass({
             <a className="dropdown-toggle" data-toggle="dropdown" href="{entry.link}">
               <i className={"fa " + entry.icon + " fa-fw"}></i>  <i className="fa fa-caret-down"></i>
             </a>
+            <ul className="dropdown-menu">
+              {entry.content.map(this.renderNavSubEntry)}
+            </ul>
         </li>
     },
     render: function () {
