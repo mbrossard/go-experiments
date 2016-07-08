@@ -3,6 +3,10 @@
 
 @import 'variables.scss';
 
+body {
+  background-color: $gray-lightest;
+}
+
 #wrapper {
   width: 100%;
 }
