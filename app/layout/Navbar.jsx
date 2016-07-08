@@ -19,6 +19,16 @@ let Navbar = React.createClass({
         }
     },
     renderNavSubEntry: function(entry, i) {
+        if (entry.text) {
+            return <li>
+                <a href="{entry.link}">
+                  <div>
+                    <i className={"fa " + entry.icon + " fa-fw"}></i> {entry.text}
+                    <span className="pull-right text-muted small"></span>
+                  </div>
+                </a>
+              </li>;
+        }
     },
     renderNavEntry: function(entry, i) {
         return <li className="dropdown">
