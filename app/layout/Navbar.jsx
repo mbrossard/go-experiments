@@ -18,6 +18,8 @@ let Navbar = React.createClass({
             ]
         }
     },
+    renderNavSubEntry: function(entry, i) {
+    },
     renderNavEntry: function(entry, i) {
         return <li className="dropdown">
             <a className="dropdown-toggle" data-toggle="dropdown" href="{entry.link}">
