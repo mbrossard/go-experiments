@@ -9,6 +9,13 @@ let Navbar = React.createClass({
                     "link": "#",
                     "content": [
                         {
+                            "icon": "fa-user",
+                            "text": "User Profile",
+                            "link": "#"
+                        },
+                        {
+                        },
+                        {
                             "icon": "fa-sign-out",
                             "text": "Logout",
                             "link": "#/login"
