@@ -28,6 +28,8 @@ let Navbar = React.createClass({
                   </div>
                 </a>
               </li>;
+        } else {                        
+            return <li className="divider"></li>;
         }
     },
     renderNavEntry: function(entry, i) {
