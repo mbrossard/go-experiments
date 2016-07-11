@@ -61,8 +61,10 @@ let Menu = React.createClass({
     renderMenuEntry: function(entry, i) {
         if(entry.content) {
             return <li id={entry.id}>
-                <a href="#"><i className={"fa " + entry.icon + " fa-fw"}></i> {entry.name} <span className="fa arrow"></span></a>
-                <ul className="nav nav-second-level">
+                <a href="#" data-toggle="collapse" data-target={ "#sidebar" + i}>
+                  <i className={"fa " + entry.icon + " fa-fw"}></i> {entry.name} <span className="fa arrow"></span>
+                </a>
+                <ul id={ "sidebar" + i } className="nav nav-second-level collapse">
                   {entry.content.map(this.renderMenuSubEntry)}
                 </ul>
               </li>
