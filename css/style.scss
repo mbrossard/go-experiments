@@ -32,6 +32,17 @@ body {
 
 .navbar-top-links {
   margin-right: 0;
+
+  li {
+    display: inline-block;
+    &:last-child {
+      margin-right: 15px;
+    }
+    a {
+      padding: 15px;
+      min-height: 50px;
+    }
+  }
 }
 
 .sidebar {
