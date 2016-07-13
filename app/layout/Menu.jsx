@@ -78,7 +78,7 @@ let Menu = React.createClass({
     },
     render: function () {
         return <div className="navbar-default sidebar" role="navigation">
-          <div className="sidebar-nav navbar-collapse">
+          <div className="sidebar-nav">
             <ul className="nav" id="side-menu">
               {this.state.entries.map(this.renderMenuEntry)}
             </ul>
