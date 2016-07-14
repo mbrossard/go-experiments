@@ -53,6 +53,14 @@ body {
       &:last-child {
         margin-right: 0;
       }
+
+      a {
+        padding: 3px 20px;
+        min-height: 0;
+        div {
+          white-space: normal;
+        }
+      }
     }
   }
 }
