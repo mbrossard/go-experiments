@@ -14,6 +14,11 @@ let Navbar = React.createClass({
                             "link": "#"
                         },
                         {
+                            "icon": "fa-gear",
+                            "text": "Settings",
+                            "link": "#"
+                        },
+                        {
                         },
                         {
                             "icon": "fa-sign-out",
