@@ -1,11 +1,12 @@
 package main
 
 import (
+	"encoding/json"
+	"fmt"
 	log "github.com/Sirupsen/logrus"
 	"github.com/gorilla/mux"
 	"html/template"
 	"net/http"
-	"fmt"
 )
 
 var templates = template.Must(template.ParseFiles("templates/index.html"))
