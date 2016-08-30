@@ -18,11 +18,16 @@ func index(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-var i = 0
+type Counter struct {
+	Value int `json:"counter"`
+}
+
+var c = Counter{0}
 
 func counter(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "{\"counter\":%d}", i);
-	i += 1
+	jsondata, _ := json.Marshal(c)
+	fmt.Fprintf(w, string(jsondata))
+	c.Value += 1
 }
 
 func main() {
