@@ -34,7 +34,7 @@ gulp.task('css', function() {
 
 gulp.task('js', function() {
     return browserify({
-        entries: './app/main.jsx',
+        entries: './src/js/main.jsx',
         debug: true
   	})
     .transform("babelify", {presets: ["es2015", "react"]})
@@ -67,8 +67,8 @@ gulp.task('fonts', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch('css/**/*.scss', ['css']);
-  gulp.watch('app/**/*.jsx', ['js']);
+  gulp.watch('src/css/**/*.scss', ['css']);
+  gulp.watch('src/js/**/*.jsx', ['js']);
 });
 
 gulp.task('default', ['css', 'js', 'vendor', 'fonts']);
